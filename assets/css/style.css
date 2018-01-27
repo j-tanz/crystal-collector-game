@@ -1,0 +1,18 @@
+body {
+    background-image: url(../images/carbon_fibre.png);
+}
+
+h1 {
+    color: greenyellow;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 76px;   
+}
+
+.jumbotron {
+    opacity: 0.6;
+}
+
+.row1 {
+    height: 125px;
+    opacity: 0.8;
+}
