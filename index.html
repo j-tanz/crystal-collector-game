@@ -18,8 +18,8 @@
         <div class="row jumbotron">
             <p class="text-center">You will be assigned a random target number to start the game.</p>
             <p class="text-center">Below you will find four magic crystals.  Clicking a crystal will add a specific number of points to your total score.</p>
-            <p class="text-center">To win the game, match your score with the target number.  Be careful not to exceed the target!</p>
-            <p class="text-center">Crystal values may change for subsequent games.</p>
+            <p class="text-center">To win the game, match your score with the target number.  Be careful not to exceed the target.</p>
+            <p class="text-center">Warning: Crystal values may change for subsequent games!</p>
         </div>
         <br>
         <div class="row">
@@ -28,27 +28,27 @@
                 <p id="targetScore"></p>
             </div>
             <div class="col-xs-6 col-sm-4 col-sm-offset-2 well well-lg text-center row1">
-                <h4 id="winCount">WINS</h4>
-                <h4 id="lossCount">LOSSES</h4>
+                <h4 id="winCount">WINS : 0</h4>
+                <h4 id="lossCount">LOSSES : 0</h4>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-6 col-sm-3">
-                <img class="img-responsive center-block" id=ruby src="assets/images/Ruby-gem-icon.png" alt="Ruby">
+                <img class="img-responsive center-block clickMe" id=ruby src="assets/images/Ruby-gem-icon.png" alt="Ruby" data-num="0">
             </div>
             <div class="col-xs-6 col-sm-3">
-                <img class="img-responsive center-block" id=blue src="assets/images/Blue-sapphire-icon.png" alt="Sapphire">
+                <img class="img-responsive center-block clickMe" id=blue src="assets/images/Blue-sapphire-icon.png" alt="Sapphire" data-num="1">
             </div>
             <div class="col-xs-6 col-sm-3">
-                <img class="img-responsive center-block" id=yellow src="assets/images/Gold-zircon-icon.png" alt="Zircon">
+                <img class="img-responsive center-block clickMe" id=yellow src="assets/images/Gold-zircon-icon.png" alt="Zircon" data-num="2">
             </div>
             <div class="col-xs-6 col-sm-3">
-                <img class="img-responsive center-block" id=purple src="assets/images/Purpl-diamond-icon.png" alt="Diamond">
+                <img class="img-responsive center-block clickMe" id=purple src="assets/images/Purpl-diamond-icon.png" alt="Diamond" data-num="3">
             </div>
         </div>
         <br>
         <div class="row">
-            <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4 well well-lg text-center">
+            <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4 well well-lg text-center row3">
                 <h3>PLAYER SCORE:</h3>
                 <p id="playerScore"></p>
             </div>
