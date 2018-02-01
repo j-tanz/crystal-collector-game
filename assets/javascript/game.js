@@ -6,33 +6,51 @@ function newGame() {
     target = Math.floor(Math.random() *102) +19;
     playScore = 0;
     crystalArr = [Math.floor(Math.random() *12) +1, Math.floor(Math.random() *12) +1, Math.floor(Math.random() *12) +1, Math.floor(Math.random() *12) +1];
+    $("#targetScore").text(target);
+    renderScore(); 
+
+    // Leaving this console.log in code so that crystal values are easily discernable
     console.log(crystalArr);  
-    $("#targetScore").text(target); 
+} 
 
-    function resetAll() {
-        playScore = 0;
-        newGame();   
-    }
-    function addOn() {
-        var index = $(this).attr("data-num");
-        playScore += crystalArr[index]
-        $("#playerScore").text(playScore);
-        
-        console.log("player= ", playScore, "target= ", target);
-        if (playScore > target) {
-            losses++;
-            $("#lossCount").text("LOSSES : " + losses);
-            alert("YOU LOSE.");
-            resetAll();
-        } else if (playScore == target) {
-            wins++;
-            $("#winCount").text("WINS : " + wins);
-            alert("YOU WIN!");
-            resetAll();
-            
-        }        
-    }
-    $(".clickMe").on("click", addOn);
-}   
+function renderScore() {
+    $("#playerScore").text(playScore);
+}
 
+function addOn() {
+    var index = $(this).attr("data-num");
+    playScore += crystalArr[index];
+    renderScore();
+    checkWin();
+}
+
+function checkWin() {
+    if (playScore > target) {
+        renderScore();
+        ifLoss();       
+    } else if (playScore == target) {
+        renderScore();
+        ifWin();
+    }        
+}
+
+function ifLoss() {
+    setTimeout(function() {
+        losses++;
+        $("#lossCount").text("LOSSES : " + losses);    
+        alert("YOU LOSE.");
+        newGame();
+    }, 100);
+}
+
+function ifWin() {
+    setTimeout(function() {
+        wins++;
+        $("#winCount").text("WINS : " + wins);
+        alert("YOU WIN!");
+        newGame();
+    }, 100);
+}
+
+$(".clickMe").on("click", addOn);
 newGame();
