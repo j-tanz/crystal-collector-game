@@ -5,7 +5,7 @@
 ### This simple math game generates a random target score ranging between 19 - 120 , and four hidden "crystal" values ranging 1 - 12.  
 
 
-#### When the player selects a crystal, the associated value is added to the players score.  Matching the target score will count as a win, exceding the target score constitutes a loss!  
+#### When the player selects a crystal, the associated value is added to the player's total score.  Matching the target score will count as a win, exceding the target score constitutes a loss!  
 
 </br>
 
