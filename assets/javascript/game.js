@@ -8,9 +8,6 @@ function newGame() {
     crystalArr = [Math.floor(Math.random() *12) +1, Math.floor(Math.random() *12) +1, Math.floor(Math.random() *12) +1, Math.floor(Math.random() *12) +1];
     $("#targetScore").text(target);
     renderScore(); 
-
-    // Leaving this console.log in code so that crystal values are easily discernable
-    console.log(crystalArr);  
 } 
 
 function renderScore() {
