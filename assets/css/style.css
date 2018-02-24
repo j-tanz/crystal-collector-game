@@ -59,3 +59,20 @@ h3 {
     position: relative;
     top: -15px;
 }
+
+@media (max-width: 492px)  {
+    #winCount, #lossCount {
+        font-size: 22px;
+    }
+
+    #targetScore {
+        font-size: 32px;
+        top: -40px;
+    }
+
+    #playerScore {
+        font-size: 52px;
+        top: -40px;
+    }
+
+}
